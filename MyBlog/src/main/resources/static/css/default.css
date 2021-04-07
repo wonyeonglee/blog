@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+
+#footer{
+	width : 100;
+	height: 30px;
+	
+}
+
+#sidebar{
+	width:30px;
+	height:100%;
+}
+
+#content{
+	float : left;
+}
