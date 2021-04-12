@@ -12,9 +12,6 @@
 </head>
 <body>
 	<div layout:fragment="content">
-	
-	<!-- boards table에 data가져와서 여기 뿌리기  -->
-	<!-- 글 작성버튼 만들기 검색 창 만들기  -->
 
 		<!-- Title -->
 		<h1 class="mt-4">Post Title</h1>
@@ -24,7 +21,10 @@
 		<p>Posted on January 1, 2019 at 12:00 PM</p>
 
 		<hr>
-
+		
+		<!-- dto에서 content 를 여기에 출력  -->
+		<div id= "boardcontent">
+		</div>
 		<!-- Comments Form -->
 		<div class="card my-4">
 			<h5 class="card-header">Leave a Comment:</h5>
@@ -37,7 +37,7 @@
 				</form>
 			</div>
 		</div>
-
+		<!--  이건 db에서 가져오는걸로  -->
 		<!-- Comment with nested comments -->
 		<div class="media mb-4">
 			<img class="d-flex mr-3 rounded-circle"
@@ -78,8 +78,9 @@
 
 
 	</div>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
+	
 
 </body>
 </html>

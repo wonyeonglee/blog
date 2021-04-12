@@ -21,6 +21,11 @@ public class BoardController {
 	@Autowired
 	BoardServiceImpl boardservice;
 	
+	@GetMapping("/board")
+	private String board(Model model) throws Exception{
+		return "board";
+	}
+	
 	@GetMapping("/getBoardList")
 	@ResponseBody
 	private List<BoardDto> getBoardList(Model model) throws Exception {

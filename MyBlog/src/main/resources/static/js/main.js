@@ -1,7 +1,13 @@
 /**
  * 
  */
-
+$(document).ready(function(){
+	$(".nav-link").click(function(){
+		$(".nav-item").removeClass('active');
+		console.log($('li').attr('class'));
+		$(this).parent().addClass('active');
+	})
+})
 
 
 function getBoardList() {
@@ -37,4 +43,5 @@ function getBoardList() {
 
 	})
 }
+
 
