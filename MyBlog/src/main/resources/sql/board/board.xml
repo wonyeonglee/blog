@@ -9,4 +9,10 @@
 
 
 	</select>
+	
+	<select id="getContentByidx" resultType="com.youngs.springboot.Board.dto.BoardDto">
+	SELECT *
+	FROM dbo.boards
+	WHERE idx=#{idx}
+	</select>
 </mapper>

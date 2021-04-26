@@ -24,11 +24,13 @@ public class BoardDaoImpl implements BoardDao{
 
 		
 		List<BoardDto> results = sqlSession.selectList("Board.selectBoardList");
-		System.out.println("result***");
-		System.out.println(results);
 		return results;
 		
 		
+	}
+	@Override
+	public BoardDto getContentByidx(BoardDto boardDto) throws Exception{
+		return sqlSession.selectOne("Board.getContentByidx", boardDto);
 	}
 
 }

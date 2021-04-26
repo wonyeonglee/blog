@@ -12,5 +12,5 @@ import com.youngs.springboot.Board.dto.BoardDto;
 public interface BoardService {
 	
 	public List<BoardDto> getBoardList() throws Exception;
-
+	public BoardDto getContentByidx(BoardDto boardDto) throws Exception;
 }

@@ -8,5 +8,7 @@ import com.youngs.springboot.Board.dto.BoardDto;
 
 public interface BoardDao {
 	public List<BoardDto> selectBoardList() throws Exception;
+	
+	public BoardDto getContentByidx(BoardDto boardDto) throws Exception;
 
 }

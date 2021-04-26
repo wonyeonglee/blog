@@ -23,5 +23,8 @@ public class BoardServiceImpl implements BoardService {
 
 		return results;
 	}
-
+	@Override
+	public BoardDto getContentByidx(BoardDto boardDto) throws Exception{
+		return boarddao.getContentByidx(boardDto);
+	}
 }

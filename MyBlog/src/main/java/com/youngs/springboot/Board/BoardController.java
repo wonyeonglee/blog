@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.youngs.springboot.Board.Service.BoardService;
@@ -34,6 +35,18 @@ public class BoardController {
 
 		return results;
 		
+	}
+	
+	@GetMapping("/board/detail")
+	private String openDetail(@RequestParam("idx") int idx, Model model) throws Exception{
+		
+		BoardDto boardDto = new BoardDto();
+		boardDto.setIdx(idx);
+		BoardDto result = boardservice.getContentByidx(boardDto);
+		model.addAttribute("board", result);
+		System.out.println("r결과값: ");
+		System.out.println(result);
+		return "boarddetail";
 	}
 
 }

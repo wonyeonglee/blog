@@ -11,20 +11,18 @@ function getBoardList() {
 			//페이징 처리는 다음에 .. 
 
 			if(result.length>1){
-				
-				for(var i=0;i<result.length;i++){
-					console.log(result[i]);
-					console.log(result[i].idx);
+				result.forEach(function(item){
 					str='<tr>'
-					str += "<td>"+result[i].idx+"</td>";
-					str+="<td>"+result[i].writer+"</td>";
-					str+="<td>"+result[i].title+"</td>";
-					str+="<td>"+result[i].date+"</td>";
-					str+="<td>"+result[i].hit+"</td>";
+					str += "<td>"+item.idx+"</td>";
+					str+="<td>"+item.writer+"</td>";
+					str+="<td><a href = 'board/detail?idx=" + item.idx + "'>" + item.title + "</a></td>";
+					str+="<td>"+item.date+"</td>";
+					str+="<td>"+item.hit+"</td>";
 					str+="</tr>"
-					console.log(str);
 					$('#boardtable').append(str);
-				}
+
+        		})
+				
 			}
 		}
 		,

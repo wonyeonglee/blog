@@ -8,8 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <title>210's blog</title>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="js/board.js"></script>
+
+
 
 </head>
 <body>
@@ -32,6 +32,9 @@
 				</tbody>
 			</table>
 		</div>
+		<div>
+			<button>글쓰기</button>
+		</div>
 
 
 		
@@ -42,4 +45,10 @@
 	
 
 </body>
+<th:block layout:fragment="script">
+  	<script th:src="@{/js/board.js}" type="text/javascript"></script>
+</th:block>
 </html>
+
+
+	
