@@ -33,4 +33,8 @@ public class BoardServiceImpl implements BoardService {
 	public void insertContent(BoardDto boardDto) throws Exception{
 		boarddao.insertContent(boardDto);
 	}
+	@Override
+	public void updateDeleteYn(BoardDto boardDto) throws Exception{
+		boarddao.updateDeleteYn(boardDto);
+	}
 }

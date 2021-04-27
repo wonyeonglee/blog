@@ -15,10 +15,7 @@
 	<div layout:fragment="content">
 	<div  th:object="${board}">
 		<h1 class="mt-4" th:text="*{title}"></h1>
-		<hr>
-		
-		
-		
+		<hr>	
 		<p th:text="*{content}" />
 		<!-- Comments Form -->
 		<div class="card my-4">
@@ -32,14 +29,9 @@
 				</form>
 			</div>
 		</div>
-
+		<a href="/board"><button>목록</button></a>
+		<a th:href="@{'/board/delete?idx=' + *{idx}}"><button>삭제</button></a>
 	</div>
-		
-
-
 	</div>
-
-	
-
 </body>
 </html>

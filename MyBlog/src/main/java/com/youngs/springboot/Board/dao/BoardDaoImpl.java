@@ -44,5 +44,9 @@ public class BoardDaoImpl implements BoardDao{
 	public void insertContent(BoardDto boardDto) throws Exception{
 		sqlSession.insert("Board.insertContent", boardDto);
 	}
+	@Override
+	public void updateDeleteYn(BoardDto boardDto) throws Exception{
+		sqlSession.update("Board.updateDeleteYnByidx",boardDto);
+	}
 
 }

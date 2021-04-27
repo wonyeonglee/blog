@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default_layout">
+
+<head>
+<meta charset="UTF-8">
+<title>글삭제</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div>
+			<form name="delete-form" action="/board/delete" autocomplete="off" method="post">  
+				<div>
+					<input type="hidden" name="idx" th:value="${idx}">
+					<br />
+					글을 작성할 때 입력했던 비밀번호를 적어주세요
+					<input type="password" id="password" name="password" maxlength='6'  value="" placeholder="비밀번호">
+					<br />
+					<input type="submit" id="submiBtn"  class="btn btn-outline-primary mr-2" value="삭제">
+				</div>
+			</form>
+			<a th:href="@{'/board/detail?idx='+${idx}}"><button>취소</button></a>	
+		</div>
+	</div>
+</body>
+</html>

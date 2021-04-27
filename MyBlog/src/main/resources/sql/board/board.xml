@@ -5,25 +5,30 @@
 	<select id="selectBoardList"
 		resultType="com.youngs.springboot.Board.dto.BoardDto">
 		SELECT *
-		FROM dbo.board_real_real
-
-
+		FROM dbo.real_board
+		WHERE delete_yn='N'
 	</select>
 	
 	<select id="getContentByidx" resultType="com.youngs.springboot.Board.dto.BoardDto">
 	SELECT *
-	FROM dbo.board_real_real
+	FROM dbo.real_board
 	WHERE idx=#{idx}
 	</select>
 	
 	<insert id="insertContent" parameterType="com.youngs.springboot.Board.dto.BoardDto">
-	INSERT INTO dbo.board_real_real
+	INSERT INTO dbo.real_board
 	VALUES (#{writer}, #{title}, #{content}, GETDATE(), 1, #{password}, 'N')
 	</insert>
 	<update id="updateHitByidx" parameterType="com.youngs.springboot.Board.dto.BoardDto">
-	UPDATE dbo.board_real_real
+	UPDATE dbo.real_board
 	SET
 		hit = hit+1
+	WHERE idx= #{idx}
+	</update>
+	<update id="updateDeleteYnByidx" parameterType="com.youngs.springboot.Board.dto.BoardDto">
+	UPDATE dbo.real_board
+	SET
+		delete_yn ='Y'
 	WHERE idx= #{idx}
 	</update>
 </mapper>

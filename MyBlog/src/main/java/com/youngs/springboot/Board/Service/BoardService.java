@@ -14,4 +14,5 @@ public interface BoardService {
 	public List<BoardDto> getBoardList() throws Exception;
 	public BoardDto getContentByidx(BoardDto boardDto) throws Exception;
 	public void insertContent(BoardDto boardDto) throws Exception;
+	public void updateDeleteYn(BoardDto boardDto) throws Exception;
 }
