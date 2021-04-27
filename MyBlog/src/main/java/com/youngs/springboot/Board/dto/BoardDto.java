@@ -16,5 +16,6 @@ public class BoardDto {
 	private String content;
 	private String date;
 	private String hit;
+	private String password;
 
 }

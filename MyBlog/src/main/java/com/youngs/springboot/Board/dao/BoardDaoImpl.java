@@ -32,5 +32,10 @@ public class BoardDaoImpl implements BoardDao{
 	public BoardDto getContentByidx(BoardDto boardDto) throws Exception{
 		return sqlSession.selectOne("Board.getContentByidx", boardDto);
 	}
+	
+	@Override
+	public void insertContent(BoardDto boardDto) throws Exception{
+		sqlSession.insert("Board.insertContent", boardDto);
+	}
 
 }

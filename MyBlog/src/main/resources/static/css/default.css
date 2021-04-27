@@ -14,7 +14,11 @@
 	background-color:black;
 }
 
-#content{
-	float : left;
-	background-color:pink;
+
+
+#content_div{
+	width:700px; 
+	height:700px; 
+/*   resize: horizontal; // 가로크기만 조절가능 
+	resize: vertical;  세로크기만 조절가능  */
 }

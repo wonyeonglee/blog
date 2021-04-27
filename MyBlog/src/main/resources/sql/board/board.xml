@@ -5,14 +5,21 @@
 	<select id="selectBoardList"
 		resultType="com.youngs.springboot.Board.dto.BoardDto">
 		SELECT *
-		FROM dbo.boards
+		FROM dbo.board_real_real
 
 
 	</select>
 	
 	<select id="getContentByidx" resultType="com.youngs.springboot.Board.dto.BoardDto">
 	SELECT *
-	FROM dbo.boards
+	FROM dbo.board_real_real
 	WHERE idx=#{idx}
 	</select>
+	
+	<insert id="insertContent" parameterType="com.youngs.springboot.Board.dto.BoardDto">
+	INSERT INTO dbo.board_real_real
+	VALUES (#{writer}, #{title}, #{content}, GETDATE(), 1, #{password}, 'N')
+	
+	
+	</insert>
 </mapper>

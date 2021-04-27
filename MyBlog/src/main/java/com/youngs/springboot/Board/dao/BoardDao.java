@@ -10,5 +10,6 @@ public interface BoardDao {
 	public List<BoardDto> selectBoardList() throws Exception;
 	
 	public BoardDto getContentByidx(BoardDto boardDto) throws Exception;
+	public void insertContent(BoardDto boardDto) throws Exception;
 
 }

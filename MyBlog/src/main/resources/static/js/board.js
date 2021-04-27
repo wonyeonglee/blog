@@ -9,8 +9,8 @@ function getBoardList() {
 		success: function(result) {
 			//들고오면 테이블에 뿌리기 
 			//페이징 처리는 다음에 .. 
-
-			if(result.length>1){
+			console.log(result);
+			if(result.length>=1){
 				result.forEach(function(item){
 					str='<tr>'
 					str += "<td>"+item.idx+"</td>";

@@ -27,4 +27,9 @@ public class BoardServiceImpl implements BoardService {
 	public BoardDto getContentByidx(BoardDto boardDto) throws Exception{
 		return boarddao.getContentByidx(boardDto);
 	}
+	
+	@Override
+	public void insertContent(BoardDto boardDto) throws Exception{
+		boarddao.insertContent(boardDto);
+	}
 }
