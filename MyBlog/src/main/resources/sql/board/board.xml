@@ -20,4 +20,10 @@
 	INSERT INTO dbo.board_real_real
 	VALUES (#{writer}, #{title}, #{content}, GETDATE(), 1, #{password}, 'N')
 	</insert>
+	<update id="updateHitByidx" parameterType="com.youngs.springboot.Board.dto.BoardDto">
+	UPDATE dbo.board_real_real
+	SET
+		hit = hit+1
+	WHERE idx= #{idx}
+	</update>
 </mapper>

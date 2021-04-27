@@ -45,8 +45,6 @@ public class BoardController {
 		boardDto.setIdx(idx);
 		BoardDto result = boardservice.getContentByidx(boardDto);
 		model.addAttribute("board", result);
-		System.out.println("r결과값: ");
-		System.out.println(result);
 		return "boarddetail";
 	}
 	

@@ -30,7 +30,14 @@ public class BoardDaoImpl implements BoardDao{
 	}
 	@Override
 	public BoardDto getContentByidx(BoardDto boardDto) throws Exception{
+		//조회수 업데이트
 		return sqlSession.selectOne("Board.getContentByidx", boardDto);
+	}
+	
+	@Override
+	public void updateHitByidx(BoardDto boardDto) throws Exception{
+		//조회수 업데이트
+		sqlSession.update("Board.updateHitByidx",boardDto);
 	}
 	
 	@Override
