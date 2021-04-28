@@ -14,17 +14,15 @@
 </head>
 <body>
 	<div layout:fragment="content">	
-	<!-- boards table에 data가져와서 여기 뿌리기  -->
-	<!-- 글 작성버튼 만들기 검색 창 만들기  -->
 		<div>
 			<table id="boardtable" class="table">
 				<thead>
 					<tr>
-						<th>번호</th>
-						<th>작성자</th>
-						<th>제목</th>
-						<th>날짜</th>
-						<th>조회수</th>
+						<th onclick="sortTable(0)" class="asc">번호</th>
+						<th onclick="sortTable(1)" class="asc">작성자</th>
+						<th onclick="sortTable(2)" class="asc">제목</th>
+						<th onclick="sortTable(3)" class="asc">날짜</th>
+						<th onclick="sortTable(4)" class="asc">조회수</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -32,7 +30,7 @@
 			</table>
 		</div>
 		<div>
-			<a href="/board/write"><button>글쓰기</button></a>
+			<a href="/board/write"><button class="btn btn-outline-primary mr-3">글쓰기</button></a>
 		</div>
 	</div>
 

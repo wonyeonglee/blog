@@ -7,8 +7,8 @@
 		SELECT *
 		FROM dbo.real_board
 		WHERE delete_yn='N'
+		ORDER BY idx*1
 	</select>
-	
 	<select id="getContentByidx" resultType="com.youngs.springboot.Board.dto.BoardDto">
 	SELECT *
 	FROM dbo.real_board

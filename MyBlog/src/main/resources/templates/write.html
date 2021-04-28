@@ -10,7 +10,7 @@
 <body>
 	<div layout:fragment="content">
 		<div>
-			<form name="write-form" action="/board/write" autocomplete="off" method="post">  
+			<form name="write-form" action="/board/write" autocomplete="off" method="post" onsubmit="return checkForm();">  
 				<div>
 					<input class="mt-4" type="text" id="title" maxlength='30' name="title" placeholder="제목을 입력하세요">
 					최대 30자
@@ -22,13 +22,11 @@
 					<br />
 					<div id="content_div">
 					 <textarea class="form-control" style="height:100%; width:100%;" maxlength='1000' id="content" name ="content"></textarea>
-					 </div>
-					<br />					
-					<a href="/board"><input type="button" id="submiBtn" onclick="checkform()" class="btn btn-outline-primary mr-2" value="작성"></a>
+					 </div>				
+					<a href="/board"><input type="submit" id="submiBtn" class="btn btn-outline-primary mr-2" value="작성"></a>
+					<a href="/board"><input type="button" class="btn btn-outline-primary mr-2" value="취소"></input></a>
 				</div>
-			</form>
-			<a href="/board"><button>취소</button></a>
-			
+			</form>			
 		</div>
 	</div>
 </body>
