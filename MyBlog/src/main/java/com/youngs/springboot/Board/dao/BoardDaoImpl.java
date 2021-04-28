@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import com.youngs.springboot.Board.dto.BoardDto;
+import com.youngs.springboot.Board.dto.CommentDto;
 
 @Repository
 @Mapper
@@ -48,5 +49,12 @@ public class BoardDaoImpl implements BoardDao{
 	public void updateDeleteYn(BoardDto boardDto) throws Exception{
 		sqlSession.update("Board.updateDeleteYnByidx",boardDto);
 	}
-
+	@Override
+	public void insertComment(CommentDto commentDto) throws Exception{
+		sqlSession.update("Board.insertComment",commentDto);
+	}
+	@Override
+	public List<CommentDto> selectCommentList(CommentDto commentDto) throws Exception{
+		return sqlSession.selectList("Board.selectCommentList",commentDto);
+	}
 }

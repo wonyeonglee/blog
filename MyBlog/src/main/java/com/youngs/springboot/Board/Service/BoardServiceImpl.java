@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.youngs.springboot.Board.dao.BoardDao;
 import com.youngs.springboot.Board.dao.BoardDaoImpl;
 import com.youngs.springboot.Board.dto.BoardDto;
+import com.youngs.springboot.Board.dto.CommentDto;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -36,5 +37,13 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public void updateDeleteYn(BoardDto boardDto) throws Exception{
 		boarddao.updateDeleteYn(boardDto);
+	}
+	@Override
+	public void insertComment(CommentDto commentDto) throws Exception{
+		boarddao.insertComment(commentDto);
+	}
+	@Override
+	public List<CommentDto> getCommentList(CommentDto commentDto) throws Exception{
+		return boarddao.selectCommentList(commentDto);
 	}
 }

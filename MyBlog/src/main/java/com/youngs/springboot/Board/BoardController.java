@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.youngs.springboot.Board.Service.BoardService;
 import com.youngs.springboot.Board.Service.BoardServiceImpl;
 import com.youngs.springboot.Board.dto.BoardDto;
+import com.youngs.springboot.Board.dto.CommentDto;
 
 
 
@@ -92,4 +93,23 @@ public class BoardController {
 		BoardDto result = boardservice.getContentByidx(boardDto);
 		return result;	
 	}
+	
+	@PostMapping("/board/comment/write")
+	private String insertComment(@RequestParam("idx") int idx, @RequestParam("content") String content) throws Exception{
+		CommentDto commentDto = new CommentDto();
+		commentDto.setContent(content);
+		commentDto.setIdx(idx);	
+		boardservice.insertComment(commentDto);
+		String redirect_url = "redirect:/board/detail?idx="+Integer.toString(idx);
+		return redirect_url;
+	}
+	
+	@GetMapping("/getCommentList")
+	@ResponseBody
+	private List<CommentDto> getCommentList(@RequestParam("idx") int idx) throws Exception{
+		CommentDto commentDto = new CommentDto();
+		commentDto.setIdx(idx);	
+		return boardservice.getCommentList(commentDto);
+		
+	}	
 }

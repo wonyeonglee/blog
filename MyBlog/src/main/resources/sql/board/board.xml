@@ -31,4 +31,14 @@
 		delete_yn ='Y'
 	WHERE idx= #{idx}
 	</update>
+	<insert id="insertComment" parameterType="com.youngs.springboot.Board.dto.CommentDto">
+	INSERT INTO dbo.comment
+	VALUES (#{idx}, 1, 1, GETDATE(), #{content},'N')
+	</insert>
+	<select id="selectCommentList"
+		resultType="com.youngs.springboot.Board.dto.CommentDto">
+		SELECT *
+		FROM dbo.comment
+		WHERE idx = #{idx}
+	</select>
 </mapper>

@@ -17,13 +17,19 @@
 		<h1 class="mt-4" th:text="*{title}"></h1>
 		<hr>	
 		<p th:text="*{content}" />
+		<hr />
+		<div id="comment">
+			<div><h3> 댓글 </h3></div>	
+		</div>
+		<hr />
 		<!-- Comments Form -->
 		<div class="card my-4">
 			<h5 class="card-header">Leave a Comment:</h5>
 			<div class="card-body">
-				<form>
+				<form name="comment-form" action="/board/comment/write" method="post" autocomplete="off">
 					<div class="form-group">
-						<textarea class="form-control" rows="3"></textarea>
+						<input type="hidden" name="idx" th:value="*{idx}" />
+						<textarea name="content" class="form-control" rows="3"></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
@@ -34,4 +40,7 @@
 	</div>
 	</div>
 </body>
+<th:block layout:fragment="script">
+  	<script th:src="@{/js/boarddetail.js}" type="text/javascript"></script>
+</th:block>
 </html>
