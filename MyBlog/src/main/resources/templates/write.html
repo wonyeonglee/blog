@@ -6,8 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>글쓰기</title>
-
-
 </head>
 <body>
 	<div layout:fragment="content">
@@ -23,19 +21,21 @@
 					최대 6자
 					<br />
 					<div id="content_div">
-					 <textarea class="form-control" style="height:100%; width:100%;" maxlength='1000' id="content" name = "content"></textarea>
+					 <textarea class="form-control" style="height:100%; width:100%;" maxlength='1000' id="content" name ="content"></textarea>
 					 </div>
 					<br />					
-					<input type="submit" id="submiBtn"  class="btn btn-outline-primary mr-2" value="작성">
+					<a href="/board"><input type="button" id="submiBtn" onclick="checkform()" class="btn btn-outline-primary mr-2" value="작성"></a>
 				</div>
 			</form>
 			<a href="/board"><button>취소</button></a>
 			
 		</div>
-	
-		
-
 	</div>
+</body>
+<th:block layout:fragment="script">
+  	<script th:src="@{/js/write.js}" type="text/javascript"></script>
+</th:block>
+</html>
 		
 
 

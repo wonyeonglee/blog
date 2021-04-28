@@ -16,12 +16,17 @@
 					<br />
 					글을 작성할 때 입력했던 비밀번호를 적어주세요
 					<input type="password" id="password" name="password" maxlength='6'  value="" placeholder="비밀번호">
+					<input type="button" class="btn btn-outline-primary mr-7"onclick="checkPassword()" value="비밀번호 확인">
 					<br />
-					<input type="submit" id="submiBtn"  class="btn btn-outline-primary mr-2" value="삭제">
+					<input type="submit" id="submiBtn"  class="btn btn-outline-primary mr-2" value="삭제" disabled>
+					<a th:href="@{'/board/detail?idx='+${idx}}"><input type="button" class="btn btn-outline-primary mr-2" value="취소"></input></a>	
 				</div>
 			</form>
-			<a th:href="@{'/board/detail?idx='+${idx}}"><button>취소</button></a>	
+			
 		</div>
 	</div>
 </body>
+<th:block layout:fragment="script">
+  	<script th:src="@{/js/delete.js}" type="text/javascript"></script>
+</th:block>
 </html>

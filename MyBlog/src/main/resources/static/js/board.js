@@ -1,8 +1,4 @@
 $(document).ready(function(){
-	if($('input[name=message]').val()==1){
-		alert("비밀번호가 일치하지 않습니다");
-		$('#message').val(0);
-	}
 	getBoardList();
 	
 })

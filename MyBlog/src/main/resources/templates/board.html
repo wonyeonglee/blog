@@ -13,8 +13,7 @@
 
 </head>
 <body>
-	<div layout:fragment="content">
-	<input type="hidden" name="message" th:value="${message}" id="message"/>	
+	<div layout:fragment="content">	
 	<!-- boards table에 data가져와서 여기 뿌리기  -->
 	<!-- 글 작성버튼 만들기 검색 창 만들기  -->
 		<div>
@@ -33,13 +32,8 @@
 			</table>
 		</div>
 		<div>
-			<a href="board/write"><button >글쓰기</button></a>
+			<a href="/board/write"><button>글쓰기</button></a>
 		</div>
-
-
-		
-
-
 	</div>
 
 	
