@@ -12,7 +12,7 @@ function getCommentList(){
 		success: function(result) {
 			console.log(result);
 			for(var i=0;i<result.length;i++){
-				var str = "<div>"
+				var str = "<div class=\"comment\">"
 				str += result[i].content+"</div></hr>"
 				$("#comment").append(str);
 			}

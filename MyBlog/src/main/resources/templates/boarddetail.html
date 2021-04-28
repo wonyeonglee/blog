@@ -14,12 +14,12 @@
 <body>
 	<div layout:fragment="content">
 	<div  th:object="${board}">
-		<h1 class="mt-4" th:text="*{title}"></h1>
+		<h1 id="title" class="mt-4" th:text="*{title}"></h1>
 		<hr>	
-		<p th:text="*{content}" />
-		<hr />
+		<p id= "content" th:text="*{content}" />
 		<div id="comment">
-			<div><h3> 댓글 </h3></div>	
+			<div><h3>Comments:</h3></div>	
+			<hr />
 		</div>
 		<hr />
 		<!-- Comments Form -->
@@ -42,5 +42,6 @@
 </body>
 <th:block layout:fragment="script">
   	<script th:src="@{/js/boarddetail.js}" type="text/javascript"></script>
+  	<link th:href="@{/css/boarddetail.css}" rel="stylesheet" type="text/css">
 </th:block>
 </html>
