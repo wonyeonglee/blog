@@ -4,6 +4,7 @@
 ------------------------
 ### 1. 게시판 기능
 #### a. 글 목록 불러오기
+![image](https://user-images.githubusercontent.com/43198629/117146155-ddcdb600-adee-11eb-8470-3636e5783a8d.png)
 
 #### b. 글 작성
 #### c. 상세 페이지 보기
