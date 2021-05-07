@@ -58,5 +58,30 @@
 수정할 수 있는 칸과 버튼 활성화 
 
 #### f. 글 검색
+![image](https://user-images.githubusercontent.com/43198629/117383679-42d2fa00-af1c-11eb-82fc-2902dbdd5c1b.png)
 
+1) 글 내용으로 검색
+2) 글 제목으로 검색
+3) 작성자로 검색
 
+쿼리문 작성
+``` 
+<select id="selectSearchList" parameterType="com.youngs.springboot.Board.dto.BoardDto" resultType="com.youngs.springboot.Board.dto.BoardDto">
+   SELECT *
+   FROM dbo.real_board
+   WHERE delete_yn='N'
+   <choose>
+      <when test="type !=null  and type.equals('title')">
+      AND title LIKE  CONCAT('%', #{keyword}, '%')
+      </when>
+      <when test="type!=null and type.equals('content')">
+      AND content LIKE  CONCAT('%', #{keyword}, '%')
+      </when>
+      <when test="type!=null and type.equals('writer')">
+      AND writer = #{keyword}
+      </when>
+   </choose>
+   </select>
+``` 
+
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/43198629/117383784-862d6880-af1c-11eb-8701-2b2600a861c6.gif)
