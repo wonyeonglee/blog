@@ -32,7 +32,13 @@
 비밀번호가 일치했기 때문에 글 삭제 버튼이 활성화 되었다.
 
 #### d. 댓글 작성
-먼저 댓글을 작성 할 수 있는 공간
+먼저 댓글을 작성 할 수 있는 공간이다.
+![image](https://user-images.githubusercontent.com/43198629/117383102-f0450e00-af1a-11eb-8f46-1e786f1ebebc.png)
+
+글을 작성하고 submit 버튼을 누르면
+
+![image](https://user-images.githubusercontent.com/43198629/117383233-41ed9880-af1b-11eb-9157-89d7f6d752b2.png)
+
 
 #### e. 글 수정
 #### f. 글 검색
