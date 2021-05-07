@@ -44,5 +44,19 @@
 #### e. 글 수정
 ![image](https://user-images.githubusercontent.com/43198629/117383395-a577c600-af1b-11eb-8d35-3d0f24ed7791.png)
 
-글 삭제와 동일하게 해당 작성자만이 글을 삭제할 수 있어야 한다.
+글 삭제와 동일하게 해당 작성자만이 글을 삭제할 수 있어야 한다. 비밀번호가 일치해야만 글 수정할 수 있는 칸과 버튼이 활성화된다.
+
+1) 비밀번호 check
+![image](https://user-images.githubusercontent.com/43198629/117383395-a577c600-af1b-11eb-8d35-3d0f24ed7791.png)
+
+2-1) 비밀번호가 틀렸을 때
+삭제 기능과 똑같이 alert 메세지가 뜬다.
+
+2-2) 비밀번호가 일치할 때
+![image](https://user-images.githubusercontent.com/43198629/117383588-10290180-af1c-11eb-941a-835be134993d.png)
+
+수정할 수 있는 칸과 버튼 활성화 
+
 #### f. 글 검색
+
+
