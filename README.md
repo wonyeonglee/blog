@@ -37,8 +37,12 @@
 
 글을 작성하고 submit 버튼을 누르면
 
-![image](https://user-images.githubusercontent.com/43198629/117383233-41ed9880-af1b-11eb-9157-89d7f6d752b2.png)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/43198629/117383333-8416da00-af1b-11eb-9ea2-f4060a703ad5.gif)
 
+댓글 작성이 완료 되고 작성된 댓글 역시 볼 수 있다.
 
 #### e. 글 수정
+![image](https://user-images.githubusercontent.com/43198629/117383395-a577c600-af1b-11eb-8d35-3d0f24ed7791.png)
+
+글 삭제와 동일하게 해당 작성자만이 글을 삭제할 수 있어야 한다.
 #### f. 글 검색
